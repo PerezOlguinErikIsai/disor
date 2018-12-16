@@ -1,0 +1,46 @@
+{
+  "name": "Cifrados",
+  "version": "1.0.0",
+  "description": "Cifrados",
+  "main": "./main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "build --dir",
+    "dist": "build"
+  },
+  "author": "Erik perez <radika.isai@gmail.com>",
+  "license": "ISC",
+  "build": {
+    "appId": "cifrados-electron1",
+    "asar": true,
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "NSIS",
+      "icon": ""
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^3.0.5",
+    "electron-builder": "^20.38.3"
+  }
+}
